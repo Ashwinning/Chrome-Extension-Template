@@ -9,17 +9,17 @@
 [
   {
   "run_at" :"document_end",
-  "matches": ["http://*.twitter.com/*", "http://twitter.com/*", "https://*.twitter.com/*", "https://twitter.com/*"],
+  "matches": ["http://*.example.com/*", "http://example.com/*", "https://*.example.com/*", "https://example.com/*"],
   "js": ["jquery-1.12.0.min.js","script.js"]
   }
 ]
 }
 
-//"run_at" tells when to load the javascript,
-//"matches" tells the URL to match to inject the code which I'm using Gmail here,
-//"js" tells all .js files to inject,
-//"CSS" tells about all included CSS files for injection.
+//"run_at" defines when to load the javascript,
+//"matches" defines the URL(s) to match to inject the code, docs : https://developer.chrome.com/extensions/match_patterns.html
+//"js" specifies all the .js files to be injected,
+//"CSS" specifies all the CSS files to be injected.
 
 //web_accessible_resources specify the path and format of files which the web page require to load from extension.
-//But why? because webpage and extension executes in isolated environments.They can't access one another's resources directly.
-//and in the following way we allow web page to access the required files from extension.
+//because webpage and extensions are executed in isolated environments. They can't access each other's resources directly.
+//and in the following way we allow web pages to access the required files from an extension.
